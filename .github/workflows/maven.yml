@@ -6,14 +6,14 @@
 # separate terms of service, privacy policy, and support
 # documentation
 
-name: Java CI with Maven
+name: Java Test
 on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
   schedule: ## Schedule the job to run at 12.am daily.
-    - cron: '54 14 * * SAT'
+    - cron: '56 14 * * SAT'
 jobs:
   build:
     runs-on: ubuntu-latest
