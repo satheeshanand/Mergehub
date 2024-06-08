@@ -6,14 +6,18 @@
 # separate terms of service, privacy policy, and support
 # documentation
 
-name: Java Test
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  push:  # Triggered on any push to the repository
+    branches:
+      - main
+      - satheeshanand-patch-1
+
+  pull_request:  # Triggered when a pull request is opened or synchronized
+    types:
+      - opened
+      - synchronize
   schedule: ## Schedule the job to run at 12.am daily.
-    - cron: '56 14 * * SAT'
+    - cron: '20 18 08 6 SAT'
 jobs:
   build:
     runs-on: ubuntu-latest
