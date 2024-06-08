@@ -7,13 +7,8 @@
 # documentation.
 
 name: Java CI with Maven
-
 on:
-  push:
-    branches: [ "testbranch" ]
   pull_request:
-    branches: [ "testbranch" ]
-
 jobs:
   build:
 
