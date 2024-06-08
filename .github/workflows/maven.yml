@@ -8,10 +8,12 @@
 
 name: Java CI with Maven
 on:
+  push:
+    branches: [ master ]
   pull_request:
     branches: [ master ]
   schedule: ## Schedule the job to run at 12.am daily.
-    - cron: '47 14 * * SAT'
+    - cron: '52 14 * * SAT'
 jobs:
   build:
     runs-on: ubuntu-latest
